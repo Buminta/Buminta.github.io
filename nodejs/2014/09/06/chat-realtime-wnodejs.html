@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome</title>
+	<title>Chat Realtime WNodeJS</title>
 	
-	<meta name="description" content="Welcome to Tan Bui github pages.">
+	<meta name="description" content="Framework WNodeJS - https://github.com/Buminta/WNodeJS.">
 	
 	<meta name="author" content="Tan Bui">
 
@@ -158,7 +158,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Welcome </h1>
+  <h1>Chat Realtime WNodeJS </h1>
 </div>
 	
 <article>
@@ -172,15 +172,25 @@
 	   2014
 	 </span>
 	  <div class="article_body">
-	  <p>Hi everybody, I’m welcome you to views github pages of me.
-I’m developer all platform and i’m always trying, trying learn to the good developer.
-Here, I’m shares somethings I know and some projects make by me.
-Thanks for viewers.</p>
+	  <p>Beta version!</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">begining</span>
-  <span class="nb">puts</span> <span class="s1">&#39;welcome everybody&#39;</span>
-<span class="k">end</span></code></pre></div>
+<p>Node listening with port 3000</p>
 
+<ul>
+  <li>Chat Real time with NodeJS, Socket.IO, ExpressJS, Jade Template</li>
+  <li>Create room chat and join to any room</li>
+  <li>Using demo MVC lite, with Express JS</li>
+</ul>
+
+<p>Listening MongoDB</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="mi">27017</span><span class="p">,</span> <span class="p">{</span><span class="nx">auto_reconnect</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Db</span><span class="p">(</span><span class="s1">&#39;chatnode&#39;</span><span class="p">,</span> <span class="nx">server</span><span class="p">,</span> <span class="p">{</span><span class="nx">safe</span><span class="o">:</span><span class="kc">false</span><span class="p">});</span></code></pre></div>
+
+<p>Restore database MongoDB for demo</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">from</span> <span class="s2">&quot;./database/chatnode&quot;</span>
+  <span class="nx">user</span><span class="o">/</span><span class="nx">password</span><span class="o">:</span> <span class="nx">admin</span><span class="o">/</span><span class="mi">123456</span></code></pre></div>
 
 	  </div>
 
@@ -190,13 +200,8 @@ Thanks for viewers.</p>
 		  
 		  
 			 
-				<li><a href="http://buminta.github.io/categories.html#webdevelop-ref">
-					webdevelop <span>(3)</span>
-					,
-				</a></li>
-			 
-				<li><a href="http://buminta.github.io/categories.html#github-ref">
-					github <span>(1)</span>
+				<li><a href="http://buminta.github.io/categories.html#nodejs-ref">
+					nodejs <span>(2)</span>
 					
 				</a></li>
 			
@@ -211,22 +216,29 @@ Thanks for viewers.</p>
 		  
 			 
 				<li>
-					<a href="http://buminta.github.io/tags.html#pages-ref">
-					pages <span>(1)</span>
+					<a href="http://buminta.github.io/tags.html#nodejs-ref">
+					nodejs <span>(2)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="http://buminta.github.io/tags.html#welcom-ref">
-					welcom <span>(1)</span>
+					<a href="http://buminta.github.io/tags.html#mvc-ref">
+					mvc <span>(2)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="http://buminta.github.io/tags.html#tanbui-ref">
-					tanbui <span>(1)</span>
+					<a href="http://buminta.github.io/tags.html#realtime-ref">
+					realtime <span>(1)</span>
+					,
+					</a>
+				</li>
+			 
+				<li>
+					<a href="http://buminta.github.io/tags.html#wnodejs-ref">
+					wnodejs <span>(1)</span>
 					
 					</a>
 				</li>
@@ -241,7 +253,7 @@ Thanks for viewers.</p>
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Welcome&via=buminta"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Chat Realtime WNodeJS&via=buminta"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -296,10 +308,10 @@ Thanks for viewers.</p>
 	<hr>
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="http://buminta.github.io/webdevelop/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html" title="Framework MVC for build web application by NodeJS">&larr; Previous</a></li>
+		  <li class="previous disabled"><a>&larr; Previous</a></li>
 		  
 		  
-			<li class="next disabled"><a>Next &rarr;</a>
+		  <li class="next"><a href="http://buminta.github.io/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html" title="Framework MVC for build web application by NodeJS">Next &rarr;</a></li>
 		  
 		</ul>
 
