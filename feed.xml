@@ -56,8 +56,7 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
 		
 			<item>
 				<title>Framework MVC for build web application by NodeJS</title>
-				<description>&lt;p&gt;Beta version!
-https://github.com/Buminta/WNodeJS&lt;/p&gt;
+				<description>&lt;p&gt;&lt;a href=&quot;https://github.com/Buminta/WNodeJS&quot;&gt;Beta version from git&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;mvc-framework-for-build-web-application&quot;&gt;MVC Framework for build web application&lt;/h2&gt;
 
@@ -132,7 +131,7 @@ https://github.com/Buminta/WNodeJS&lt;/p&gt;
 		
 			<item>
 				<title>Chat Realtime WNodeJS</title>
-				<description>&lt;p&gt;Beta version!&lt;/p&gt;
+				<description>&lt;p&gt;&lt;a href=&quot;https://github.com/Buminta/Node&quot;&gt;Beta version from git&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Node listening with port 3000&lt;/p&gt;
 
