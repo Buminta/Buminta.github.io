@@ -3,8 +3,8 @@
 	<channel>
 		<title></title>
 		<description>Projects of Tan Bui</description>
-		<link>http://http://buminta.github.io//</link>
-		<atom:link href="http://http://buminta.github.io//feed.xml" rel="self" type="application/rss+xml" />
+		<link>buminta.github.io/</link>
+		<atom:link href="buminta.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Welcome</title>
@@ -19,8 +19,8 @@ Thanks for viewers.&lt;/p&gt;
 
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://http://buminta.github.io//webdevelop/github/2014/09/06/welcome.html</link>
-				<guid isPermaLink="true">http://http://buminta.github.io//webdevelop/github/2014/09/06/welcome.html</guid>
+				<link>buminta.github.io/webdevelop/github/2014/09/06/welcome.html</link>
+				<guid isPermaLink="true">buminta.github.io/webdevelop/github/2014/09/06/welcome.html</guid>
 			</item>
 		
 	</channel>
