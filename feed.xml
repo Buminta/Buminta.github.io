@@ -24,6 +24,41 @@ Thanks for viewers.&lt;/p&gt;
 			</item>
 		
 			<item>
+				<title>Nguyên tắc quan trọng trong xây dựng hệ thống (server)</title>
+				<description>&lt;ul&gt;
+  &lt;li&gt;Ghi log chi tiết tất cả mọi thứ, mọi lúc. Dữ liệu log trong database tránh tham chiếu đến các bảng db khác mà lưu giá trị cụ thể, ví dụ: log product thì ngoài product id phải lưu cả product_price, product_title… để tránh các giá trị thay đổi theo thời gian bởi người dùng&lt;/li&gt;
+  &lt;li&gt;Xây dựng hệ thống error trace chi tiết và rõ ràng phục vụ cho debug và dễ dàng xóa bỏ khi deploy&lt;/li&gt;
+  &lt;li&gt;Quản lý danh sách các tài khoản test, sandbox để dễ dàng và chính xác trong việc thống kê và remove khi deploy chính thức&lt;/li&gt;
+  &lt;li&gt;Cung cấp hệ thống bảo mật, xác thực ngay từ đầu 1 cách tổng quát cho chức năng, tài khoản truy cập, token cho bên thứ 3 để quản lý việc ai được sử dụng chức năng…, ghi log truy cập của người dùng… Ví dụ cp muốn sử dụng api thì phải đăng ký api_key dành riêng cho mỗi cp, giúp cho việc log và quản lý dễ dàng, bảo mật…&lt;/li&gt;
+  &lt;li&gt;Luôn luôn backup dữ liệu:
+    &lt;ul&gt;
+      &lt;li&gt;source qua svn bằng cách tạo quy trình deployment với branchs, tags… 
+   Ví dụ: khi deploy product thì cần:
+   . tạo 1 bản tag theo version kèm ngày tương ứng 1.0.20140109, 2.3.20140103… 
+   . sau đó export ra thư mục deployment
+   khi cần sửa 1 chức năng nhỏ trong bản release 1.0.20130518 mà source đang phát triển cho 2.0 rồi thì cần:
+   . tạo 1 bản branch từ bản tag 1.0.20130518 với tên là “version_mục_đích_thay_đổi”
+   . sau đó sửa trên bản branch đến khi hoàn thiện
+   . cập nhật sang source trunk
+   . tạo tag với version cũ và ngày release vd: 1.0.20130624
+   . backup thư mục source deployment vào 1 thư mục backup với tên thư mục là ngày tháng năm backup như 20140901
+   . export đè vào thư mục source deployment&lt;/li&gt;
+      &lt;li&gt;databases backup tự động định kỳ hàng ngày/tuần/tháng&lt;/li&gt;
+      &lt;li&gt;backup databases manual mỗi lần nâng cấp hệ thống, test hệ thống&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Luôn sao database chính ra 1 db tạm khi thử chức năng mới mà có kết nối đến db kể cả có chỉnh sửa db hay ko&lt;/li&gt;
+  &lt;li&gt;Tạo thư mục source, database, tk riêng cho mỗi developer trong quá trình dev, ko dùng chung với db và deployed source&lt;/li&gt;
+  &lt;li&gt;Lưu tất cả tài khoản liên quan đến hệ thống như tk server, database, svn, quản trị… xuống note, server hoặc lưu trữ vào bất kỳ nơi nào an toàn, đảm bảo và cập nhật ngay khi có sự thay đổi&lt;/li&gt;
+  &lt;li&gt;Nghiêm chỉnh chấp hành các quy trình bảo mật và an toàn dữ liệu trên dù chỉ thay đổi nhỏ hoặc đơn giản&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
+				<link>http://buminta.github.io/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</link>
+				<guid isPermaLink="true">http://buminta.github.io/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</guid>
+			</item>
+		
+			<item>
 				<title>Ngôn ngữ lập trình nào tốt nhất?</title>
 				<description>&lt;p&gt;Xin chào các bạn, nếu các bạn đến với bài viết vì vì cái câu hỏi vu vơ kia và cũng chỉ để xem ngôn ngữ lập trình nào là tốt nhất, để rồi đắc ý khoe khoang thứ ngôn ngữ mình đang theo là đỉnh cao nhất, là anh cả của các ông dung ngôn ngữ khác, thì thực sự xin lỗi bạn sẽ không tìm được thứ như mình mong muốn đâu.
 Vậy, ngôn ngữ lập trình nào tốt nhất, mình xin mạo muội nói rằng các bạn không thể đem so sánh ngôn ngữ nào hơn ngôn ngữ nào, vì đơn giản mỗi ngôn ngữ lập trình đều có điểm mạnh điểm yếu riêng, cũng như nó thích hợp với từng nền tảng khác nhau, chả ai đem Passcal đi để lập trình web cả, cũng chả ai đem PHP để viết mấy cái chương trình console tính toán cơ bản đâu.&lt;/p&gt;
