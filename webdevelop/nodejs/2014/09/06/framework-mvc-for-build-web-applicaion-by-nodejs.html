@@ -176,52 +176,51 @@
 https://github.com/Buminta/WNodeJS</p>
 
 <h2 id="mvc-framework-for-build-web-application">MVC Framework for build web application</h2>
-<p><code>javascript
-//configs.js
-module.exports = {
-	listen_port: 3000,
-	database: {
-		host: "127.0.0.1",
-		port: 27017,
-		name: "demo"
-	},
-	sercurity: {
-		key: "express.sid",
-		secret: "1234567890QWERTY"
-	},
-	// socket_path: samples.js
-	// adding when using socket.io
-	// var global for using: socket, session
-}
-</code>
-Using socket when u need</p>
 
-<p>Package using from fw
-<code>javascript
-//package.json
-{
-  "name": "WNodeJS",
-  "description": "MVC Framework for ExpressJS",
-  "version": "1.0.0",
-  "author": "Tan Bui (http://buminta.com)",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/buminta/wnode.git"
-  },
-  "dependencies": {
-    "express": "3.x",
-    "MD5": "latest",
-    "socket.io": "latest",
-    "jade": "latest",
-    "connect": "latest",
-    "mongodb": "latest"
-  },
-  "engines": {
-    "node": "0.10.x",
-    "npm": "1.4.x"
-  }
-}
-</code></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//configs.js</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="nx">listen_port</span><span class="o">:</span> <span class="mi">3000</span><span class="p">,</span>
+	<span class="nx">database</span><span class="o">:</span> <span class="p">{</span>
+		<span class="nx">host</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+		<span class="nx">port</span><span class="o">:</span> <span class="mi">27017</span><span class="p">,</span>
+		<span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;demo&quot;</span>
+	<span class="p">},</span>
+	<span class="nx">sercurity</span><span class="o">:</span> <span class="p">{</span>
+		<span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;express.sid&quot;</span><span class="p">,</span>
+		<span class="nx">secret</span><span class="o">:</span> <span class="s2">&quot;1234567890QWERTY&quot;</span>
+	<span class="p">},</span>
+	<span class="c1">// socket_path: samples.js</span>
+	<span class="c1">// adding when using socket.io</span>
+	<span class="c1">// var global for using: socket, session</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Using socket when u need</p>
+
+<p>Package using from fw</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//package.json</span>
+<span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;WNodeJS&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;MVC Framework for ExpressJS&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;Tan Bui (http://buminta.com)&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;repository&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span> <span class="o">:</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span> <span class="o">:</span> <span class="s2">&quot;https://github.com/buminta/wnode.git&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="s2">&quot;3.x&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MD5&quot;</span><span class="o">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;socket.io&quot;</span><span class="o">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jade&quot;</span><span class="o">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;connect&quot;</span><span class="o">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mongodb&quot;</span><span class="o">:</span> <span class="s2">&quot;latest&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;engines&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;node&quot;</span><span class="o">:</span> <span class="s2">&quot;0.10.x&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;npm&quot;</span><span class="o">:</span> <span class="s2">&quot;1.4.x&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
 <ul>
   <li>public folder for using somes file using in client</li>
@@ -230,19 +229,16 @@ Using socket when u need</p>
   <li>controllers folder for class control request and responsive</li>
 </ul>
 
-<p>``` javascript
-// controllers/demo.js
-// Extend from controller Class in libs.
-module.exports = Controller.extend({
-	run: function(){
-		//the first run before action runing
-	},
-	index: function(){
-		//action for controller
-	}
-});</p>
-
-<p>```</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// controllers/demo.js</span>
+<span class="c1">// Extend from controller Class in libs.</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+	<span class="nx">run</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+		<span class="c1">//the first run before action runing</span>
+	<span class="p">},</span>
+	<span class="nx">index</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+		<span class="c1">//action for controller</span>
+	<span class="p">}</span>
+<span class="p">});</span></code></pre></div>
 
 
 	  </div>
