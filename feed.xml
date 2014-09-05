@@ -23,5 +23,113 @@ Thanks for viewers.&lt;/p&gt;
 				<guid isPermaLink="true">http://buminta.github.io/webdevelop/github/2014/09/06/welcome.html</guid>
 			</item>
 		
+			<item>
+				<title>Framework MVC for build web application by NodeJS</title>
+				<description>&lt;p&gt;Beta version!
+https://github.com/Buminta/WNodeJS&lt;/p&gt;
+
+&lt;h2 id=&quot;mvc-framework-for-build-web-application&quot;&gt;MVC Framework for build web application&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;javascript
+//configs.js
+module.exports = {
+	listen_port: 3000,
+	database: {
+		host: &quot;127.0.0.1&quot;,
+		port: 27017,
+		name: &quot;demo&quot;
+	},
+	sercurity: {
+		key: &quot;express.sid&quot;,
+		secret: &quot;1234567890QWERTY&quot;
+	},
+	// socket_path: samples.js
+	// adding when using socket.io
+	// var global for using: socket, session
+}
+&lt;/code&gt;
+Using socket when u need&lt;/p&gt;
+
+&lt;p&gt;Package using from fw
+&lt;code&gt;javascript
+//package.json
+{
+  &quot;name&quot;: &quot;WNodeJS&quot;,
+  &quot;description&quot;: &quot;MVC Framework for ExpressJS&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;author&quot;: &quot;Tan Bui (http://buminta.com)&quot;,
+  &quot;repository&quot; : {
+    &quot;type&quot; : &quot;git&quot;,
+    &quot;url&quot; : &quot;https://github.com/buminta/wnode.git&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;express&quot;: &quot;3.x&quot;,
+    &quot;MD5&quot;: &quot;latest&quot;,
+    &quot;socket.io&quot;: &quot;latest&quot;,
+    &quot;jade&quot;: &quot;latest&quot;,
+    &quot;connect&quot;: &quot;latest&quot;,
+    &quot;mongodb&quot;: &quot;latest&quot;
+  },
+  &quot;engines&quot;: {
+    &quot;node&quot;: &quot;0.10.x&quot;,
+    &quot;npm&quot;: &quot;1.4.x&quot;
+  }
+}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;public folder for using somes file using in client&lt;/li&gt;
+  &lt;li&gt;views folder for jade language of template application&lt;/li&gt;
+  &lt;li&gt;models folder for class in out with database&lt;/li&gt;
+  &lt;li&gt;controllers folder for class control request and responsive&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;``` javascript
+// controllers/demo.js
+// Extend from controller Class in libs.
+module.exports = Controller.extend({
+	run: function(){
+		//the first run before action runing
+	},
+	index: function(){
+		//action for controller
+	}
+});&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+</description>
+				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
+				<link>http://buminta.github.io/webdevelop/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</link>
+				<guid isPermaLink="true">http://buminta.github.io/webdevelop/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</guid>
+			</item>
+		
+			<item>
+				<title>Chat Realtime WNodeJS</title>
+				<description>&lt;p&gt;Beta version!&lt;/p&gt;
+
+&lt;p&gt;Node listening with port 3000
+&lt;code&gt;
+Chat Real time with NodeJS, Socket.IO, ExpressJS, Jade Template
+Create room chat and join to any room
+Using demo MVC lite, with Express JS
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Listening MongoDB
+&lt;code&gt;javascript
+var server = new Server(&#39;127.0.0.1&#39;, 27017, {auto_reconnect: true});
+var db = new Db(&#39;chatnode&#39;, server, {safe:false});
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Restore database MongoDB for demo
+&lt;code&gt;
+  from &quot;./database/chatnode&quot;
+  user/password: admin/123456
+&lt;/code&gt;&lt;/p&gt;
+</description>
+				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
+				<link>http://buminta.github.io/webdevelop/nodejs/2014/09/06/chat-realtime-wnodejs.html</link>
+				<guid isPermaLink="true">http://buminta.github.io/webdevelop/nodejs/2014/09/06/chat-realtime-wnodejs.html</guid>
+			</item>
+		
 	</channel>
 </rss>
