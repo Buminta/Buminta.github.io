@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
 
 body{
-	color: #2c3e50;
+	color: #505050;
 }
 
 .sidebar {
@@ -82,7 +82,7 @@ article .share .gplus:hover {
 }
 
 .page-header {
-	color: #000;
+	color: #505050;
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
 
@@ -105,8 +105,8 @@ article {
 	padding: 0 5% 0;
 }
 
-article.home div a, article.home pre a { color: #2c3e50; }
-article.home div a:hover, article.home pre a:hover { color: #2c3e50; text-decoration: none; }
+article.home div a, article.home pre a { color: #505050; }
+article.home div a:hover, article.home pre a:hover { color: #505050; text-decoration: none; }
 article img { max-width: 100%; }
 
 h1,h2,h3,h4,h5,h6 { font-family: 'Ubuntu', sans-serif; }
@@ -117,14 +117,14 @@ article.home h4,
 article.home h5,
 article.home h6 {
 	font-family: 'Ubuntu', sans-serif;
-	color: #000;
+	color: #505050;
 }
 
 article.home h1 a,
 article.home h2 a,
 article.home h3 a,
 article.home h4 a {
-	color: #000;
+	color: #505050;
 }
 article.home h1 a:hover,
 article.home h2 a:hover,
@@ -166,13 +166,13 @@ footer {
     border-radius: 4px 0 0 4px;
 }
 
-.badge { background: #000; }
+.badge { background: #505050; }
 
 #nav-menu{
     position: fixed;
     top: 45px;
     right: 45px;
-    z-index: 2000;
+    z-index: 2505050;
 }
 #nav-menu .dropdown-menu {
     left: inherit;
@@ -181,4 +181,8 @@ footer {
 
 ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
+}
+
+.content{
+	background: whitesmoke;
 }
