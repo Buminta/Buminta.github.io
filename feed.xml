@@ -3,8 +3,8 @@
 	<channel>
 		<title></title>
 		<description>Projects of Tan Bui</description>
-		<link>http://buminta.github.io/</link>
-		<atom:link href="http://buminta.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Welcome</title>
@@ -19,8 +19,8 @@ Thanks for viewers.&lt;/p&gt;
 
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.github.io/github/2014/09/06/welcome.html</link>
-				<guid isPermaLink="true">http://buminta.github.io/github/2014/09/06/welcome.html</guid>
+				<link>/github/2014/09/06/welcome.html</link>
+				<guid isPermaLink="true">/github/2014/09/06/welcome.html</guid>
 			</item>
 		
 			<item>
@@ -54,8 +54,8 @@ Thanks for viewers.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.github.io/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</link>
-				<guid isPermaLink="true">http://buminta.github.io/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</guid>
+				<link>/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</link>
+				<guid isPermaLink="true">/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</guid>
 			</item>
 		
 			<item>
@@ -96,8 +96,8 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
 &lt;p&gt;K.T Buminta.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.github.io/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</link>
-				<guid isPermaLink="true">http://buminta.github.io/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</guid>
+				<link>/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</link>
+				<guid isPermaLink="true">/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</guid>
 			</item>
 		
 			<item>
@@ -171,8 +171,8 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
 
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.github.io/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</link>
-				<guid isPermaLink="true">http://buminta.github.io/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</guid>
+				<link>/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</link>
+				<guid isPermaLink="true">/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</guid>
 			</item>
 		
 			<item>
@@ -198,8 +198,8 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
   &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123456&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.github.io/nodejs/2014/09/06/chat-realtime-wnodejs.html</link>
-				<guid isPermaLink="true">http://buminta.github.io/nodejs/2014/09/06/chat-realtime-wnodejs.html</guid>
+				<link>/nodejs/2014/09/06/chat-realtime-wnodejs.html</link>
+				<guid isPermaLink="true">/nodejs/2014/09/06/chat-realtime-wnodejs.html</guid>
 			</item>
 		
 	</channel>
