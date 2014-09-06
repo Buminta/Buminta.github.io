@@ -29,6 +29,15 @@
   </url>
   
   <url>
+    <loc>/hacker/2014/09/06/hack-by-pmint93.html</loc>
+    
+    <lastmod>2014-09-06T00:00:00+07:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
     <loc>/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</loc>
     
     <lastmod>2014-09-06T00:00:00+07:00</lastmod>
