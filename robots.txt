@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://{{ site.DOMAIN }}/sitemap.xml
+Sitemap: http://buminta.com/sitemap.xml
