@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/github/2014/09/06/welcome.html</loc>
+    <loc>http:///github/2014/09/06/welcome.html</loc>
     
     <lastmod>2014-09-06T00:00:00+07:00</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</loc>
+    <loc>http:///developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</loc>
     
     <lastmod>2014-09-06T00:00:00+07:00</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</loc>
+    <loc>http:///language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</loc>
     
     <lastmod>2014-09-06T00:00:00+07:00</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</loc>
+    <loc>http:///nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</loc>
     
     <lastmod>2014-09-06T00:00:00+07:00</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>/nodejs/2014/09/06/chat-realtime-wnodejs.html</loc>
+    <loc>http:///nodejs/2014/09/06/chat-realtime-wnodejs.html</loc>
     
     <lastmod>2014-09-06T00:00:00+07:00</lastmod>
     
