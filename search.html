@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Tan Bui Projects</title>
+	<title>Search</title>
 	
 	<meta name="author" content="Tan Bui">
 
@@ -166,58 +166,43 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Tan Bui Projects </h1>
+  <h1>Search </h1>
 </div>
 
-<!----------------------------------------------------------------
-     _ _           _ _          
-  __| | |__  _   _| | |         Ascii arts included in this page:
- / _` | '_ \| | | | | |         - R2D2, provided by: http://www.chris.com/
-| (_| | |_) | |_| | | |         - Texts, generated from: http://www.network-science.de/ascii/
- \__,_|_.__/ \__, |_|_|         http://github.com/dbtek/dbyll
--------------|___/------------------------------------------------>
+<input class="form-control" placeholder="Text search" id="input-search"/>
+<hr>
+<!-- Tab panes -->
+<div class="tab-content col-sm-12 col-xs-6" id="content-search">
 
-  <style>
-    pre {
-          background: none;
-          border: none;
+</div>
+
+<div class="clearfix"></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    if($("#input-search").val().length > 0){
+      getData();
     }
-  </style>
+    $("#input-search").bind('keyup', function(){
+      getData();
+    });
+  });
+  function getData(){
+    var results = idx.search($("#input-search").val());
+      $("#content-search").html("");
+      for(index in results){
+        $("#content-search").append(
+          '<div class="tab-pane" style="display: block;">'
+            +'<ul class="list-unstyled">'
+              +'<li style="line-height: 35px;">'
+                +'<a href="'+results[index].ref+'">'+docs[results[index].ref].title+'</a>'
+              +'</li>'
+            +'</ul>'
+          +'</div>'
+        );
+      }
+  }
+</script>
 
-  <pre>
-
-                       444444444       000000000            444444444   
-                      4::::::::4     00:::::::::00         4::::::::4  
-                     4:::::::::4   00:::::::::::::00      4:::::::::4  
-                    4::::44::::4  0:::::::000:::::::0    4::::44::::4  
-                   4::::4 4::::4  0::::::0   0::::::0   4::::4 4::::4  
-                  4::::4  4::::4  0:::::0     0:::::0  4::::4  4::::4  
-                 4::::4   4::::4  0:::::0     0:::::0 4::::4   4::::4  
-                4::::444444::::4440:::::0 000 0:::::04::::444444::::444
-                4::::::::::::::::40:::::0 000 0:::::04::::::::::::::::4
-                4444444444:::::4440:::::0     0:::::04444444444:::::444
-                          4::::4  0:::::0     0:::::0          4::::4  
-                          4::::4  0::::::0   0::::::0          4::::4  
-                          4::::4  0:::::::000:::::::0          4::::4  
-                        44::::::44 00:::::::::::::00         44::::::44
-                        4::::::::4   00:::::::::00           4::::::::4
-                        4444444444     000000000             4444444444
-
-         ,-----.             _   _     _           _                 _     _               _   
-       ,'_/_|_\_`.          | |_| |__ (_)___   ___| |__   ___  _   _| | __| |  _ __   ___ | |_ 
-      /<<::8[O]::>\         | __| '_ \| / __| / __| '_ \ / _ \| | | | |/ _` | | '_ \ / _ \| __|
-     _|-----------|_        | |_| | | | \__ \ \__ \ | | | (_) | |_| | | (_| | | | | | (_) | |_ 
- :::|  | ====-=- |  |:::     \__|_| |_|_|___/ |___/_| |_|\___/ \__,_|_|\__,_| |_| |_|\___/ \__|
- :::|  | -=-==== |  |:::                                                                         
- :::\  | ::::|()||  /:::     _                                                          
- ::::| | ....|()|| |::::    | |__   __ _ _ __  _ __   ___ _ __       _____   _____ _ __ 
-     | |_________| |        | '_ \ / _` | '_ \| '_ \ / _ \ '_ \     / _ \ \ / / _ \ '__|
-     | |\_______/| |        | | | | (_| | |_) | |_) |  __/ | | |_  |  __/\ V /  __/ |   
-    /   \ /   \ /   \       |_| |_|\__,_| .__/| .__/ \___|_| |_( )  \___| \_/ \___|_|   
-    `---' `---' `---'                   |_|   |_|              |/                       
-
-
-    </pre>
 
 
 
