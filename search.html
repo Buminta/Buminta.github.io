@@ -34,8 +34,6 @@
 	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/assets/js/app.js"></script>
-	<script src="/assets/js/lunr.min.js"></script>
-	<script src="/search.js"></script>
 </head>
 
 <body>
@@ -177,10 +175,12 @@
 </div>
 
 <div class="clearfix"></div>
+<script src="/assets/js/lunr.min.js"></script>
+<script src="/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     if($("#input-search").val().length > 0){
-      getData();
+      getData()
     }
     $("#input-search").bind('keyup', function(){
       getData();
