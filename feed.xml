@@ -53,7 +53,7 @@ Blocking tức đồng bộ:
 
 &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;END&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;global_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Nếu xét theo phương diện blocking. Thì chúng ta sẽ show ra &lt;code&gt;END&lt;/code&gt; cuối cùng và lúc này biến &lt;code&gt;global_tmp&lt;/code&gt; đã thay đổi dù ajax có get được hay không. và blocking thì giá trị của chúng ta sẽ là ‘&#39;’100’’’&lt;/p&gt;
+&lt;p&gt;Nếu xét theo phương diện blocking. Thì chúng ta sẽ show ra &lt;code&gt;END&lt;/code&gt; cuối cùng và lúc này biến &lt;code&gt;global_tmp&lt;/code&gt; đã thay đổi dù ajax có get được hay không. và blocking thì giá trị của chúng ta sẽ là &lt;code&gt;100&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Tuy nhiên. với mặc định Ajax trong Jquery sẽ là Non-blocking hay khái niệm Asynctask.
 và chúng ta sẽ nhận việc in ra màn hình &lt;code&gt;END&lt;/code&gt; vs &lt;code&gt;global_tmp&lt;/code&gt; không phải giá trị như ta nghĩ - Lý do là Task làm việc thay đổi giá trị của biến đang được tách thành luồng khác và chạy song song với các dòng lệnh tiếp theo.&lt;/p&gt;
