@@ -189,17 +189,17 @@ Blocking tức đồng bộ:
 </ul>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">a</span><span class="p">(){</span>
-<span class="c1">//do something blocking.</span>
+	<span class="c1">//do something blocking.</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">b</span><span class="p">(){</span>
-<span class="c1">//do something blocking.</span>
+	<span class="c1">//do something blocking.</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">main</span><span class="p">(){</span>
-<span class="c1">//blocking code, call function a() end to call function b().</span>
-<span class="nx">a</span><span class="p">();</span>
-<span class="nx">b</span><span class="p">();</span>
+	<span class="c1">//blocking code, call function a() end to call function b().</span>
+	<span class="nx">a</span><span class="p">();</span>
+	<span class="nx">b</span><span class="p">();</span>
 <span class="p">}</span></code></pre></div>
 
 <p>Non Blocking tức bất đồng bộ:
@@ -208,22 +208,22 @@ Blocking tức đồng bộ:
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">global_tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-<span class="nx">url</span><span class="o">:</span> <span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//sample.demo/api”,</span>
-<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">“</span><span class="nx">SUCCESS</span><span class="err">”</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
-<span class="p">},</span>
-<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
-<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">“</span><span class="nx">ERR</span><span class="err">”</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
-<span class="p">}</span>
+	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://sample.demo/api&#39;</span><span class="p">,</span>
+	<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;SUCCESS&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
+	<span class="p">},</span>
+	<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ERR&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
+	<span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">“</span><span class="nx">END</span><span class="err">”</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></div>
 
 <p>Nếu xét theo phương diện blocking. Thì chúng ta sẽ show ra <code>END</code> cuối cùng và lúc này biến <code>global_tmp</code> đã thay đổi dù ajax có get được hay không. và blocking thì giá trị của chúng ta sẽ là ‘'’100’’’</p>
 
