@@ -236,23 +236,23 @@ và chúng ta sẽ nhận việc in ra màn hình <code>END</code> vs <code>glob
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">global_tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-<span class="nx">url</span><span class="o">:</span> <span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//sample.demo/api”,</span>
-<span class="nx">async</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">“</span><span class="nx">SUCCESS</span><span class="err">”</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
-<span class="p">},</span>
-<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
-<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">“</span><span class="nx">ERR</span><span class="err">”</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
-<span class="p">}</span>
+	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://sample.demo/api&#39;</span><span class="p">,</span>
+	<span class="nx">async</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+	<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;SUCCESS&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
+	<span class="p">},</span>
+	<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="nx">global_tmp</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ERR&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span>
+	<span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">“</span><span class="nx">END</span><span class="err">”</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></div>
 
 <p>:) Và khi đó bạn thoải mái gọi ở dòng lệnh bên dưới như thế này 1 cách bình thường.</p>
 
