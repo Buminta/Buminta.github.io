@@ -7,6 +7,58 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>WNodeJS Frameworj Verions 2</title>
+				<description>&lt;p&gt;&lt;a href=&quot;https://www.npmjs.org/package/wnodejs&quot;&gt;Version 2.0.1 Description in npm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-new&quot;&gt;What new?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create multi application&lt;/li&gt;
+  &lt;li&gt;Manager and render View&lt;/li&gt;
+  &lt;li&gt;Manager and config Model&lt;/li&gt;
+  &lt;li&gt;Create Controller and Action inside controller&lt;/li&gt;
+  &lt;li&gt;Manager and process params, args from url&lt;/li&gt;
+  &lt;li&gt;Open socket.io&lt;/li&gt;
+  &lt;li&gt;Supporter Interface for Controller to render view.&lt;/li&gt;
+  &lt;li&gt;Supporter require mores Object for using&lt;/li&gt;
+  &lt;li&gt;Supporter extends, implement, interface method for Class.&lt;/li&gt;
+  &lt;li&gt;Manager session&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;application-tree-source&quot;&gt;Application tree source&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;All application inside &lt;code&gt;app&lt;/code&gt; folder
+ &lt;code&gt;
+app
+├── api
+│   ├── controllers
+│   │   └── ... //home.js
+│   ├── init.js
+│   └── models
+└── demo
+    ├── controllers
+    │   ├── ... //home.js
+    ├── init.js
+    ├── models
+    │   └── ... //auth_users.js
+    ├── modules
+    │   └── ...
+    ├── static
+    │   ├── css
+    │   │   ├── ...
+    │   ├── ...
+    │   └── js
+    │       ├── ...
+    └── views
+        ├── ...
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Fri, 31 Oct 2014 00:00:00 +0700</pubDate>
+				<link>http://buminta.com/nodejs/2014/10/31/wnodejs-version-2.html</link>
+				<guid isPermaLink="true">/nodejs/2014/10/31/wnodejs-version-2.html</guid>
+			</item>
+		
+			<item>
 				<title>Blocking vs Non-blocking</title>
 				<description>&lt;p&gt;Trong lập trình ứng dụng hẳn là ai cũng phải đau đầu với vấn đề Blocking hay Non Blocking. Sẽ có nhiều lúc bạn chả hiểu vì sao chương trình của mình lại chạy không như ý muốn, khi thì câu lệnh này chạy trước, khi thì câu lệnh kia lại chạy trước (và nó thường gặp khi bạn dính phải cơ chế bất đồng bộ - non blocking):
 Blocking tức đồng bộ:
