@@ -3,7 +3,7 @@ var docs =
 
 	"/nodejs/2014/10/31/wnodejs-version-2.html":{
 	"id"    : "/nodejs/2014/10/31/wnodejs-version-2.html",
-	"title"   : "WNodeJS Frameworj Verions 2",
+	"title"   : "WNodeJS Framework Verions 2",
 	"content" : "Version 2.0.1 Description in npmWhat new?  Create multi application  Manager and render View  Manager and config Model  Create Controller and Action inside controller  Manager and process params, args from url  Open socket.io  Supporter Interface for Controller to render view.  Supporter require mores Object for using  Supporter extends, implement, interface method for Class.  Manager sessionApplication tree source  All application inside app folder app├── api│   ├── controllers│   │   └── ... //home.js│   ├── init.js│   └── models└── demo    ├── controllers    │   ├── ... //home.js    ├── init.js    ├── models    │   └── ... //auth_users.js    ├── modules    │   └── ...    ├── static    │   ├── css    │   │   ├── ...    │   ├── ...    │   └── js    │       ├── ...    └── views        ├── ..."
 },
 
