@@ -26,32 +26,31 @@
 
 &lt;h3 id=&quot;application-tree-source&quot;&gt;Application tree source&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;All application inside &lt;code&gt;app&lt;/code&gt; folder
- &lt;code&gt;
-app
-├── api
-│   ├── controllers
-│   │   └── ... //home.js
-│   ├── init.js
-│   └── models
-└── demo
-    ├── controllers
-    │   ├── ... //home.js
-    ├── init.js
-    ├── models
-    │   └── ... //auth_users.js
-    ├── modules
-    │   └── ...
-    ├── static
-    │   ├── css
-    │   │   ├── ...
-    │   ├── ...
-    │   └── js
-    │       ├── ...
-    └── views
-        ├── ...
-&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;All application inside &lt;code&gt;app&lt;/code&gt; folder&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;api&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;controllers&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//home.js&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;models&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;demo&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;controllers&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//home.js&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;models&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//auth_users.js&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;modules&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;static&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt; &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;│  &lt;/span&gt;     &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;views&lt;/span&gt;
+          &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
 				<pubDate>Fri, 31 Oct 2014 00:00:00 +0700</pubDate>
 				<link>http://buminta.com/nodejs/2014/10/31/wnodejs-version-2.html</link>
