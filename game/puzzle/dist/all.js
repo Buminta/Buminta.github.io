@@ -31087,7 +31087,7 @@ CutImage = Class.extend({
     },
     eventListener: function(){
         var _self = this;
-        this.border.on('touchend',function(){
+        this.border.on('click',function(){
             _self.hover = true;
             JOOUtils.generateEvent('CheckMove', _self);
         });
@@ -31235,7 +31235,7 @@ SelectMenuStage = PortletStage.extend({
     	};
     	imageObj.src = imagedata;
     	this.importClose();
-    	this["crop-ok-btn"].addEventListener("touchend", function(){
+    	this["crop-ok-btn"].addEventListener("click", function(){
     		_self.cropOk(imagedata);
     	});
     },
@@ -31299,7 +31299,7 @@ SettingsStage = PortletStage.extend({
             this.vibrate.access().addClass('active');
         }
         this.level.access().text(this._flagLevel+'x'+this._flagLevel); 
-        this.sound.addEventListener('touchend', function(){
+        this.sound.addEventListener('click', function(){
            if(_self._flagSound){
                _self.sound.access().removeClass('active'); 
                _self._flagSound = false;
@@ -31311,7 +31311,7 @@ SettingsStage = PortletStage.extend({
            Storage.gameData.Sound = _self._flagSound;
            Storage.setLocal();
         });
-        this.vibrate.addEventListener('touchend', function(){
+        this.vibrate.addEventListener('click', function(){
             if(_self._flagVibrate){
                 _self.vibrate.access().removeClass('active'); 
                 _self._flagVibrate = false;
@@ -31323,7 +31323,7 @@ SettingsStage = PortletStage.extend({
             Storage.gameData.Vibrate = _self._flagVibrate;
             Storage.setLocal();
         });
-        this.level.addEventListener('touchend', function(){
+        this.level.addEventListener('click', function(){
            if(_self._flagLevel<5){
                _self._flagLevel++;
                _self.level.access().text(_self._flagLevel+'x'+_self._flagLevel); 
@@ -31425,7 +31425,7 @@ BuButton = Sketch.extend({
     stageUpdated: function(){
         var _self = this;
         this.setStyle('-webkit-transition','100ms ease-in-out');
-        this.addEventListener('touchstart',function(){
+        this.addEventListener('click',function(){
             _self.click();
         });
     },
