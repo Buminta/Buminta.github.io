@@ -82,7 +82,7 @@
 		<joo:composition extclasses="parentStage">
 			<joo:Sketch extclasses="bg" varName="stage">
 				<joo:Sketch extclasses="barHeader">
-					<joo:Sketch extclasses="backBtn" varName="back" handler:touchend="this.onHideHighScore()"></joo:Sketch>
+					<joo:Sketch extclasses="backBtn" varName="back" handler:click="this.onHideHighScore()"></joo:Sketch>
 					<joo:Sketch extclasses="title">High Score</joo:Sketch>
 				</joo:Sketch>
 				<joo:Sketch extclasses="main">
@@ -115,7 +115,7 @@
 				<joo:Sketch extclasses="screen" varName="canvas">
 				</joo:Sketch>
 				<joo:Sketch extclasses="barRemote" varName="barRemote">
-					<joo:Sketch extclasses="backBtn" handler:touchend="this.backToSelect()"></joo:Sketch>
+					<joo:Sketch extclasses="backBtn" handler:click="this.backToSelect()"></joo:Sketch>
 				</joo:Sketch>
 			</joo:Sketch>
 		</joo:composition>
@@ -126,9 +126,9 @@
 		<joo:composition extclasses="parentStage">
 			<joo:Sketch extclasses="bg" varName="bg">
 				<joo:Sketch extclasses="barHeader">
-					<joo:Sketch extclasses="backBtn" varName="back" handler:touchend="this.backToStart()"></joo:Sketch>
+					<joo:Sketch extclasses="backBtn" varName="back" handler:click="this.backToStart()"></joo:Sketch>
 					<joo:Sketch extclasses="title">Select Image</joo:Sketch>
-					<joo:Sketch extclasses="addImageBtn" varName="addImageBtn" handler:touchend="this.importOpen()"></joo:Sketch>
+					<joo:Sketch extclasses="addImageBtn" varName="addImageBtn" handler:click="this.importOpen()"></joo:Sketch>
 				</joo:Sketch>
 				<joo:Sketch extclasses="main" varName="main">
 						<joo:Sketch extclasses="imageContainer" varName="imageContainer">
@@ -136,7 +136,7 @@
 								$.each(Storage.gameData.Images,function(i,data){
 							%>
 								<joo:Sketch extclasses="item" handler:touchstart="this.toPlay(<%=i%>)" varName="item-<%=i%>">
-									<joo:Sketch extclasses="image-remove" handler:touchend="this.removeImage(<%=i%>)"></joo:Sketch>
+									<joo:Sketch extclasses="image-remove" handler:click="this.removeImage(<%=i%>)"></joo:Sketch>
 									<joo:JOOImage src="<%=data.src%>"/>
 								</joo:Sketch>
 							<%
@@ -144,12 +144,12 @@
 							%>
 						</joo:Sketch>
 				</joo:Sketch>
-				<joo:Sketch extclasses="import-prompt" varName="import-prompt" handler:touchend="this.importClose()">
+				<joo:Sketch extclasses="import-prompt" varName="import-prompt" handler:click="this.importClose()">
 					<joo:Sketch extclasses="import-main">
 						<joo:Sketch extclasses="import-title">Import Image</joo:Sketch>
 						<joo:Sketch extclasses="import-container">
-							<joo:Sketch extclasses="library" handler:touchend="this.importImage(2)">Choose From Library</joo:Sketch>
-							<joo:Sketch extclasses="camera" handler:touchend="this.importImage(1)">Capture From Camera</joo:Sketch>
+							<joo:Sketch extclasses="library" handler:click="this.importImage(2)">Choose From Library</joo:Sketch>
+							<joo:Sketch extclasses="camera" handler:click="this.importImage(1)">Capture From Camera</joo:Sketch>
 						</joo:Sketch>
 					</joo:Sketch>
 				</joo:Sketch>
@@ -171,7 +171,7 @@
 		<joo:composition extclasses="parentStage">
 			<joo:Sketch extclasses="bg" varName="stage">
 				<joo:Sketch extclasses="barHeader">
-					<joo:Sketch extclasses="backBtn" varName="back" handler:touchend="this.onHideSettings()"></joo:Sketch>
+					<joo:Sketch extclasses="backBtn" varName="back" handler:click="this.onHideSettings()"></joo:Sketch>
 					<joo:Sketch extclasses="title">Settings</joo:Sketch>
 				</joo:Sketch>
 				<joo:Sketch extclasses="main">
@@ -200,9 +200,9 @@
 			<joo:Sketch extclasses="bg" varName="bg">
 				<joo:Sketch extclasses="min-logo"></joo:Sketch>
 				<joo:Sketch extclasses="menu">
-					<joo:BuButton extclasses="newGame" handler:touchend="this.newGame()"></joo:BuButton>
-					<joo:BuButton extclasses="highScore" handler:touchend="this.highScore()"></joo:BuButton>
-					<joo:BuButton extclasses="settings" handler:touchend="this.settings()"></joo:BuButton>
+					<joo:BuButton extclasses="newGame" handler:click="this.newGame()"></joo:BuButton>
+					<joo:BuButton extclasses="highScore" handler:click="this.highScore()"></joo:BuButton>
+					<joo:BuButton extclasses="settings" handler:click="this.settings()"></joo:BuButton>
 				</joo:Sketch>
 			</joo:Sketch>
 		</joo:composition>
