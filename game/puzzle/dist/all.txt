@@ -1,0 +1,247 @@
+<!-- indicate the effective area, required by Joo Framework -->
+<div id="effective-area">
+	<div id="container">
+		<div id="wrapper">
+			<div id="main"></div>
+		</div><!-- wrapper -->
+	</div><!-- container -->
+</div><!-- effective-area -->
+<div id="Portlets-Layout">
+	<script type="text/html" id="portlets-Layout">
+		{
+			portlets:
+			[
+			],
+			plugins:
+			[
+			]
+		}
+	</script>
+	
+	<script type="text/html" id="portlets-Home">
+		{
+			portlets:
+			[
+			{ portlet: 'LoadingPortlet', position: 'main' }
+			],
+			plugins:
+			[
+			],
+			parent: 'Layout'
+		}
+	</script>
+	
+	<script type="text/html" id="portlets-Start">
+		{
+			portlets:
+			[
+			{ portlet: 'StartPortlet', position: 'main' }
+			],
+			plugins:
+			[
+				{plugin: 'ScreenPropertiesPlugin', delay: false}
+			],
+			parent: 'Layout'
+		}
+	</script>
+	
+	<script type="text/html" id="portlets-SelectMenu">
+		{
+			portlets:
+			[
+			{ portlet: 'SelectMenuPortlet', position: 'main' }
+			],
+			plugins:
+			[
+			{plugin: 'ScreenPropertiesPlugin', delay: false}
+			],
+			parent: 'Layout'
+		}
+	</script>
+	
+	<script type="text/html" id="portlets-Play">
+		{
+			portlets:
+			[
+			{ portlet: 'PlayPortlet', position: 'main' }
+			],
+			plugins:
+			[
+			{plugin: 'ScreenPropertiesPlugin', delay: false}
+			],
+			parent: 'Layout'
+		}
+	</script>
+</div>
+<!-- plugin template -->
+<div class="plugin-data">
+	<!-- all plugin templates go here -->
+</div>
+<div class="view-data">
+	<script type="text/html" id="HighScoreStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="bg" varName="stage">
+				<joo:Sketch extclasses="barHeader">
+					<joo:Sketch extclasses="backBtn" varName="back" handler:touchend="this.onHideHighScore()"></joo:Sketch>
+					<joo:Sketch extclasses="title">High Score</joo:Sketch>
+				</joo:Sketch>
+				<joo:Sketch extclasses="main">
+					<joo:Sketch extclasses="listPoint" varName="main">
+						<table id="table">
+						</table>
+					</joo:Sketch>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+<div class="view-data">
+	<script type="text/html" id="LoadingStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="bg" varName="bg">
+				<joo:Sketch extclasses="logo"></joo:Sketch>
+				<joo:Sketch extclasses="loadBar">
+					<joo:Sketch extclasses="load" varName="load"></joo:Sketch>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+
+<div class="view-data">
+	<script type="text/html" id="PlayStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="bg" varName="bg">
+				<joo:Sketch extclasses="screen" varName="canvas">
+				</joo:Sketch>
+				<joo:Sketch extclasses="barRemote" varName="barRemote">
+					<joo:Sketch extclasses="backBtn" handler:touchend="this.backToSelect()"></joo:Sketch>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+<div class="view-data">
+	<script type="text/html" id="SelectMenuStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="bg" varName="bg">
+				<joo:Sketch extclasses="barHeader">
+					<joo:Sketch extclasses="backBtn" varName="back" handler:touchend="this.backToStart()"></joo:Sketch>
+					<joo:Sketch extclasses="title">Select Image</joo:Sketch>
+					<joo:Sketch extclasses="addImageBtn" varName="addImageBtn" handler:touchend="this.importOpen()"></joo:Sketch>
+				</joo:Sketch>
+				<joo:Sketch extclasses="main" varName="main">
+						<joo:Sketch extclasses="imageContainer" varName="imageContainer">
+							<%
+								$.each(Storage.gameData.Images,function(i,data){
+							%>
+								<joo:Sketch extclasses="item" handler:touchstart="this.toPlay(<%=i%>)" varName="item-<%=i%>">
+									<joo:Sketch extclasses="image-remove" handler:touchend="this.removeImage(<%=i%>)"></joo:Sketch>
+									<joo:JOOImage src="<%=data.src%>"/>
+								</joo:Sketch>
+							<%
+								});
+							%>
+						</joo:Sketch>
+				</joo:Sketch>
+				<joo:Sketch extclasses="import-prompt" varName="import-prompt" handler:touchend="this.importClose()">
+					<joo:Sketch extclasses="import-main">
+						<joo:Sketch extclasses="import-title">Import Image</joo:Sketch>
+						<joo:Sketch extclasses="import-container">
+							<joo:Sketch extclasses="library" handler:touchend="this.importImage(2)">Choose From Library</joo:Sketch>
+							<joo:Sketch extclasses="camera" handler:touchend="this.importImage(1)">Capture From Camera</joo:Sketch>
+						</joo:Sketch>
+					</joo:Sketch>
+				</joo:Sketch>
+				<joo:Sketch extclasses="import-prompt" varName="crop-image">
+					<joo:Sketch extclasses="import-main">
+						<joo:Sketch extclasses="import-title">Crop Image</joo:Sketch>
+						<joo:Sketch extclasses="import-container" varName="crop-img-container">
+							
+						</joo:Sketch>
+						<joo:Sketch extclasses="crop-ok-btn" varName="crop-ok-btn">Ok</joo:Sketch>
+					</joo:Sketch>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+<div class="view-data">
+	<script type="text/html" id="SettingsStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="bg" varName="stage">
+				<joo:Sketch extclasses="barHeader">
+					<joo:Sketch extclasses="backBtn" varName="back" handler:touchend="this.onHideSettings()"></joo:Sketch>
+					<joo:Sketch extclasses="title">Settings</joo:Sketch>
+				</joo:Sketch>
+				<joo:Sketch extclasses="main">
+					<joo:Sketch>
+						<joo:Sketch extclasses="titSound">Sound</joo:Sketch>
+						<joo:Sketch extclasses="activeSound" varName="sound"></joo:Sketch>
+					</joo:Sketch>
+                    <joo:Sketch>
+						<joo:Sketch extclasses="titSound">Vibrate</joo:Sketch>
+						<joo:Sketch extclasses="activeSound" varName="vibrate"></joo:Sketch>
+					</joo:Sketch>
+					<joo:Sketch>
+						<joo:Sketch extclasses="titSound">Level</joo:Sketch>
+						<joo:Sketch extclasses="activeSound">
+							<joo:Sketch extclasses="level" varName="level">2x2</joo:Sketch>
+						</joo:Sketch>
+					</joo:Sketch>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+<div class="view-data">
+	<script type="text/html" id="StartStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="bg" varName="bg">
+				<joo:Sketch extclasses="min-logo"></joo:Sketch>
+				<joo:Sketch extclasses="menu">
+					<joo:BuButton extclasses="newGame" handler:touchend="this.newGame()"></joo:BuButton>
+					<joo:BuButton extclasses="highScore" handler:touchend="this.highScore()"></joo:BuButton>
+					<joo:BuButton extclasses="settings" handler:touchend="this.settings()"></joo:BuButton>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+<div class="view-data">
+	<script type="text/html" id="FinishStageView">
+		<joo:composition extclasses="parentStage">
+			<joo:Sketch extclasses="finish" varName="stage">
+				<joo:Sketch extclasses="bgResult"></joo:Sketch>
+				<joo:Sketch extclasses="box">
+					<joo:Sketch extclasses="label">
+						<joo:Sketch extclasses="title">Time:</joo:Sketch>
+						<joo:Sketch extclasses="varTime" varName="time">00:00</joo:Sketch>
+					</joo:Sketch>
+					<joo:Sketch extclasses="label">
+						<joo:Sketch extclasses="title">Name:</joo:Sketch>
+						<joo:JOOTextInput extclasses="input" varName="input">Buminta</joo:JOOTextInput>
+					</joo:Sketch>
+					<joo:Sketch extclasses="saveBtn" handler:touchstart="this.savePoint()"></joo:Sketch>
+				</joo:Sketch>
+			</joo:Sketch>
+		</joo:composition>
+	</script>
+</div>
+<div class="portlet-data">
+	<script type="text/html" id="LoadingPortletView">
+	</script>
+</div>
+
+<div class="portlet-data">
+	<script type="text/html" id="PlayPortletView">
+	</script>
+</div>
+<div class="portlet-data">
+	<script type="text/html" id="SelectMenuPortletView">
+	</script>
+</div>
+<div class="portlet-data">
+	<script type="text/html" id="StartPortletView">
+	</script>
+</div>
