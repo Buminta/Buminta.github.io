@@ -136,7 +136,6 @@
 								$.each(Storage.gameData.Images,function(i,data){
 							%>
 								<joo:Sketch extclasses="item" handler:click="this.toPlay(<%=i%>)" varName="item-<%=i%>">
-									<joo:Sketch extclasses="image-remove" handler:click="this.removeImage(<%=i%>)"></joo:Sketch>
 									<joo:JOOImage src="<%=data.src%>"/>
 								</joo:Sketch>
 							<%

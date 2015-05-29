@@ -31272,30 +31272,7 @@ SelectMenuStage = PortletStage.extend({
     },
     toPlay: function(i){
     	var _self  = this;
-        var moving = false;
-        var removeBtns = document.getElementsByClassName("image-remove");
-        var pointer;
-        for(var j in removeBtns){
-        	if(removeBtns[j].classList && removeBtns[j].classList.contains("scalein")){
-	        	removeBtns[j].classList.remove("scalein");
-        		removeBtns[j].style.visibility = "hidden";
-        	}
-        }
-        var timeout = setTimeout(function(){
-        	_self['item-'+i].access().find(".image-remove").css({"visibility": "visible"});
-        	_self['item-'+i].access().find(".image-remove").addClass("scalein");
-        	moving = true;
-        },700);
-        this['item-'+i].addEventListener('touchmove',function(){
-        	clearTimeout(timeout);
-            moving = true;
-        });
-        this['item-'+i].addEventListener('touchend', function(){
-        	clearTimeout(timeout);
-            if(!moving){
-            	JOOUtils.generateEvent('RequestRoute', new Request('Play',null,{id:i,round:Storage.gameData.Round}));
-            }
-        });
+        JOOUtils.generateEvent('RequestRoute', new Request('Play',null,{id:i,round:Storage.gameData.Round}));
     },
     clear: function(){
     	
