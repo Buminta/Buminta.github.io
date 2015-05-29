@@ -135,7 +135,7 @@
 							<%
 								$.each(Storage.gameData.Images,function(i,data){
 							%>
-								<joo:Sketch extclasses="item" handler:touchstart="this.toPlay(<%=i%>)" varName="item-<%=i%>">
+								<joo:Sketch extclasses="item" handler:click="this.toPlay(<%=i%>)" varName="item-<%=i%>">
 									<joo:Sketch extclasses="image-remove" handler:click="this.removeImage(<%=i%>)"></joo:Sketch>
 									<joo:JOOImage src="<%=data.src%>"/>
 								</joo:Sketch>
@@ -222,7 +222,7 @@
 						<joo:Sketch extclasses="title">Name:</joo:Sketch>
 						<joo:JOOTextInput extclasses="input" varName="input">Buminta</joo:JOOTextInput>
 					</joo:Sketch>
-					<joo:Sketch extclasses="saveBtn" handler:touchstart="this.savePoint()"></joo:Sketch>
+					<joo:Sketch extclasses="saveBtn" handler:click="this.savePoint()"></joo:Sketch>
 				</joo:Sketch>
 			</joo:Sketch>
 		</joo:composition>
