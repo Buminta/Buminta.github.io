@@ -31087,7 +31087,7 @@ CutImage = Class.extend({
     },
     eventListener: function(){
         var _self = this;
-        this.border.on('click',function(){
+        this.border.on('touchend',function(){
             _self.hover = true;
             JOOUtils.generateEvent('CheckMove', _self);
         });
@@ -31235,7 +31235,7 @@ SelectMenuStage = PortletStage.extend({
     	};
     	imageObj.src = imagedata;
     	this.importClose();
-    	this["crop-ok-btn"].addEventListener("click", function(){
+    	this["crop-ok-btn"].addEventListener("touchend", function(){
     		_self.cropOk(imagedata);
     	});
     },
@@ -31272,7 +31272,30 @@ SelectMenuStage = PortletStage.extend({
     },
     toPlay: function(i){
     	var _self  = this;
-        JOOUtils.generateEvent('RequestRoute', new Request('Play',null,{id:i,round:Storage.gameData.Round}));
+        var moving = false;
+        var removeBtns = document.getElementsByClassName("image-remove");
+        var pointer;
+        for(var j in removeBtns){
+        	if(removeBtns[j].classList && removeBtns[j].classList.contains("scalein")){
+	        	removeBtns[j].classList.remove("scalein");
+        		removeBtns[j].style.visibility = "hidden";
+        	}
+        }
+        var timeout = setTimeout(function(){
+        	_self['item-'+i].access().find(".image-remove").css({"visibility": "visible"});
+        	_self['item-'+i].access().find(".image-remove").addClass("scalein");
+        	moving = true;
+        },700);
+        this['item-'+i].addEventListener('touchmove',function(){
+        	clearTimeout(timeout);
+            moving = true;
+        });
+        this['item-'+i].addEventListener('touchend', function(){
+        	clearTimeout(timeout);
+            if(!moving){
+            	JOOUtils.generateEvent('RequestRoute', new Request('Play',null,{id:i,round:Storage.gameData.Round}));
+            }
+        });
     },
     clear: function(){
     	
@@ -31299,7 +31322,7 @@ SettingsStage = PortletStage.extend({
             this.vibrate.access().addClass('active');
         }
         this.level.access().text(this._flagLevel+'x'+this._flagLevel); 
-        this.sound.addEventListener('click', function(){
+        this.sound.addEventListener('touchend', function(){
            if(_self._flagSound){
                _self.sound.access().removeClass('active'); 
                _self._flagSound = false;
@@ -31311,7 +31334,7 @@ SettingsStage = PortletStage.extend({
            Storage.gameData.Sound = _self._flagSound;
            Storage.setLocal();
         });
-        this.vibrate.addEventListener('click', function(){
+        this.vibrate.addEventListener('touchend', function(){
             if(_self._flagVibrate){
                 _self.vibrate.access().removeClass('active'); 
                 _self._flagVibrate = false;
@@ -31323,7 +31346,7 @@ SettingsStage = PortletStage.extend({
             Storage.gameData.Vibrate = _self._flagVibrate;
             Storage.setLocal();
         });
-        this.level.addEventListener('click', function(){
+        this.level.addEventListener('touchend', function(){
            if(_self._flagLevel<5){
                _self._flagLevel++;
                _self.level.access().text(_self._flagLevel+'x'+_self._flagLevel); 
@@ -31425,7 +31448,7 @@ BuButton = Sketch.extend({
     stageUpdated: function(){
         var _self = this;
         this.setStyle('-webkit-transition','100ms ease-in-out');
-        this.addEventListener('click',function(){
+        this.addEventListener('touchstart',function(){
             _self.click();
         });
     },

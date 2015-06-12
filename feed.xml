@@ -3,8 +3,8 @@
 	<channel>
 		<title></title>
 		<description>Projects of Tan Bui</description>
-		<link>/</link>
-		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		<link>./</link>
+		<atom:link href="./feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>WNodeJS Framework Verions 2</title>
@@ -53,8 +53,8 @@
           &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
 				<pubDate>Fri, 31 Oct 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/nodejs/2014/10/31/wnodejs-version-2.html</link>
-				<guid isPermaLink="true">/nodejs/2014/10/31/wnodejs-version-2.html</guid>
+				<link>http://buminta.com./nodejs/2014/10/31/wnodejs-version-2.html</link>
+				<guid isPermaLink="true">./nodejs/2014/10/31/wnodejs-version-2.html</guid>
 			</item>
 		
 			<item>
@@ -136,8 +136,8 @@ và chúng ta sẽ nhận việc in ra màn hình &lt;code&gt;END&lt;/code&gt; v
 &lt;p&gt;:) Và khi đó bạn thoải mái gọi ở dòng lệnh bên dưới như thế này 1 cách bình thường.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 20 Oct 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/nodejs/js/2014/10/20/blocking-vs-nonblocking.html</link>
-				<guid isPermaLink="true">/nodejs/js/2014/10/20/blocking-vs-nonblocking.html</guid>
+				<link>http://buminta.com./nodejs/js/2014/10/20/blocking-vs-nonblocking.html</link>
+				<guid isPermaLink="true">./nodejs/js/2014/10/20/blocking-vs-nonblocking.html</guid>
 			</item>
 		
 			<item>
@@ -161,8 +161,8 @@ Thiếu lòng tin hay kiêu ngạo (bản thân bạn tự cảm thấy mình gi
 &lt;p&gt;Tuy nhiên nhìn về khía cạnh con người chúng ta trong những giai đoạn thăng trầm phát triển của đất nước, chiến tranh, áp bức bóc lột rồi đến sự phân hoá giàu nghèo làm cho con người ta bớt gần lại với nhau, ít chia sẻ với nhau đi. để mãi không thể thoát ra khỏi cái tâm lý “ngại chia sẻ”.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 14 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/blog/2014/09/14/tam-ly-ngai-chia-se.html</link>
-				<guid isPermaLink="true">/blog/2014/09/14/tam-ly-ngai-chia-se.html</guid>
+				<link>http://buminta.com./blog/2014/09/14/tam-ly-ngai-chia-se.html</link>
+				<guid isPermaLink="true">./blog/2014/09/14/tam-ly-ngai-chia-se.html</guid>
 			</item>
 		
 			<item>
@@ -178,8 +178,8 @@ Thanks for viewers.&lt;/p&gt;
 
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/github/2014/09/06/welcome.html</link>
-				<guid isPermaLink="true">/github/2014/09/06/welcome.html</guid>
+				<link>http://buminta.com./github/2014/09/06/welcome.html</link>
+				<guid isPermaLink="true">./github/2014/09/06/welcome.html</guid>
 			</item>
 		
 			<item>
@@ -213,8 +213,8 @@ Thanks for viewers.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</link>
-				<guid isPermaLink="true">/developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</guid>
+				<link>http://buminta.com./developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</link>
+				<guid isPermaLink="true">./developer/2014/09/06/nguyen-tac-co-ban-trong-xay-dung-he-thong-server.html</guid>
 			</item>
 		
 			<item>
@@ -255,8 +255,8 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
 &lt;p&gt;K.T Buminta.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</link>
-				<guid isPermaLink="true">/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</guid>
+				<link>http://buminta.com./language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</link>
+				<guid isPermaLink="true">./language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</guid>
 			</item>
 		
 			<item>
@@ -330,8 +330,8 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
 
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</link>
-				<guid isPermaLink="true">/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</guid>
+				<link>http://buminta.com./nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</link>
+				<guid isPermaLink="true">./nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</guid>
 			</item>
 		
 			<item>
@@ -357,8 +357,8 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
   &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123456&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/nodejs/2014/09/06/chat-realtime-wnodejs.html</link>
-				<guid isPermaLink="true">/nodejs/2014/09/06/chat-realtime-wnodejs.html</guid>
+				<link>http://buminta.com./nodejs/2014/09/06/chat-realtime-wnodejs.html</link>
+				<guid isPermaLink="true">./nodejs/2014/09/06/chat-realtime-wnodejs.html</guid>
 			</item>
 		
 	</channel>
