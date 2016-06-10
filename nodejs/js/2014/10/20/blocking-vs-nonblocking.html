@@ -190,7 +190,7 @@ Blocking tức đồng bộ:
   <li>1 Ví dụ trên Javascript:</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">a</span><span class="p">(){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">a</span><span class="p">(){</span>
 	<span class="c1">//do something blocking.</span>
 <span class="p">}</span>
 
@@ -202,13 +202,13 @@ Blocking tức đồng bộ:
 	<span class="c1">//blocking code, call function a() end to call function b().</span>
 	<span class="nx">a</span><span class="p">();</span>
 	<span class="nx">b</span><span class="p">();</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Non Blocking tức bất đồng bộ:
 - Nếu ai đó đã tiếp xúc với khái niệm Thread(Luồng) và Multi Thread (Đa luồng) hay xử lý đa luồng trong lập trình ứng dụng thì cũng sẽ hiểu Non Blocking nó sẽ gần giống như thế. Tức là với đa luồng ta có thể cho 2 luồng chạy song song nhau, có hoặc không liên quan đến giá trị biến chung của nhau đang chiếm giữ. Và Non blocking cũng giống như đoạn code đang chạy blocking bỗng mở một luồng chạy riêng ra và xử lý song song vs các đoạn code sau mà ko bắt chúng chờ đợi.
 Đó chính là nguyên nhân tại sao mà đôi khi các bạn sẽ gặp những vấn đề rằng giá trị không như mong muốn. và điển hình mình sẽ ví dụ Non blocking và sự thay đổi giá trị của nó ntn trên <code>JS + Ajax (Jquery)</code> - Lý do vì sao mình chọn Ajax vs Jquery vì nó sẽ cho chúng ta thấy dễ nhất và hầu như các bạn sử dụng Ajax của Jquery đều từng phải đau đầu vì chả hiểu sao biến của mình nó mất tiêu, hay cũng như timeout của nó đủ để chúng ta nhìn ngay thấy sự thay đổi:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">global_tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">global_tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
 	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://sample.demo/api&#39;</span><span class="p">,</span>
 	<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
@@ -225,7 +225,7 @@ Blocking tức đồng bộ:
 	<span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></figure>
 
 <p>Nếu xét theo phương diện blocking. Thì chúng ta sẽ show ra <code>END</code> cuối cùng và lúc này biến <code>global_tmp</code> đã thay đổi dù ajax có get được hay không. và blocking thì giá trị của chúng ta sẽ là <code>100</code></p>
 
@@ -236,7 +236,7 @@ và chúng ta sẽ nhận việc in ra màn hình <code>END</code> vs <code>glob
 - Thứ nhất các bạn có thể tìm hiểu về khái niệm Callback trong JS và tất nhiên sử dụng biến trong hàm callback chứ ko đặt ngoài như vậy
 - Và còn nữa, jquery hỗ trợ bạn gọi với cơ chế blocking bằng cách đưa thêm 1 params vào cho nó là: <code>{async: false}</code></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">global_tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">global_tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
 	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://sample.demo/api&#39;</span><span class="p">,</span>
 	<span class="nx">async</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -254,7 +254,7 @@ và chúng ta sẽ nhận việc in ra màn hình <code>END</code> vs <code>glob
 	<span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="nx">global_tmp</span><span class="p">);</span> </code></pre></figure>
 
 <p>:) Và khi đó bạn thoải mái gọi ở dòng lệnh bên dưới như thế này 1 cách bình thường.</p>
 
@@ -400,7 +400,7 @@ và chúng ta sẽ nhận việc in ra màn hình <code>END</code> vs <code>glob
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2015 Tan Bui with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2016 Tan Bui with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>
