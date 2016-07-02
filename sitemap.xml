@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://buminta.com/android/2016/07/02/android-windhotspot.html</loc>
+    
+    <lastmod>2016-07-02T00:00:00+07:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
     <loc>http://buminta.com/nodejs/2014/10/31/wnodejs-version-2.html</loc>
     
     <lastmod>2014-10-31T00:00:00+07:00</lastmod>

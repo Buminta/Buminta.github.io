@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>WNodeJS Framework Verions 2</title>
+	<title>Android - WindHotspot ( bind, unbind event free style like JS)</title>
 	
-	<meta name="description" content="Multi application.">
+	<meta name="description" content="Bind and Unbind custom everyone events with everyone arguments method in everywhere.">
 	
 	<meta name="author" content="Tan Bui">
 
@@ -168,7 +168,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>WNodeJS Framework Verions 2 </h1>
+  <h1>Android - WindHotspot ( bind, unbind event free style like JS) </h1>
 </div>
 	
 <article>
@@ -176,55 +176,65 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   October 
-	   31st,
+	   July 
+	   2nd,
 	     
-	   2014
+	   2016
 	 </span>
 	  <div class="article_body">
-	  <p><a href="https://www.npmjs.org/package/wnodejs">Version 2.0.1 Description in npm</a></p>
+	  <p><a href="https://github.com/Buminta/WindHotspot">Version 0.0.1 Description in github</a></p>
 
-<h2 id="what-new">What new?</h2>
-<ul>
-  <li>Create multi application</li>
-  <li>Manager and render View</li>
-  <li>Manager and config Model</li>
-  <li>Create Controller and Action inside controller</li>
-  <li>Manager and process params, args from url</li>
-  <li>Open socket.io</li>
-  <li>Supporter Interface for Controller to render view.</li>
-  <li>Supporter require mores Object for using</li>
-  <li>Supporter extends, implement, interface method for Class.</li>
-  <li>Manager session</li>
-</ul>
+<h4 id="maven">Maven</h4>
 
-<h3 id="application-tree-source">Application tree source</h3>
-<ul>
-  <li>All application inside <code>app</code> folder</li>
-</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">xyz</span><span class="o">.</span><span class="na">windjs</span><span class="o">.</span><span class="na">android</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">WindHotspot</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="n">pom</span><span class="o">&lt;/</span><span class="n">type</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">  <span class="nx">app</span>
-  <span class="err">├──</span> <span class="nx">api</span>
-  <span class="err">│  </span> <span class="err">├──</span> <span class="nx">controllers</span>
-  <span class="err">│  </span> <span class="err">│  </span> <span class="err">└──</span> <span class="p">...</span> <span class="c1">//home.js</span>
-  <span class="err">│  </span> <span class="err">├──</span> <span class="nx">init</span><span class="p">.</span><span class="nx">js</span>
-  <span class="err">│  </span> <span class="err">└──</span> <span class="nx">models</span>
-  <span class="err">└──</span> <span class="nx">demo</span>
-      <span class="err">├──</span> <span class="nx">controllers</span>
-      <span class="err">│  </span> <span class="err">├──</span> <span class="p">...</span> <span class="c1">//home.js</span>
-      <span class="err">├──</span> <span class="nx">init</span><span class="p">.</span><span class="nx">js</span>
-      <span class="err">├──</span> <span class="nx">models</span>
-      <span class="err">│  </span> <span class="err">└──</span> <span class="p">...</span> <span class="c1">//auth_users.js</span>
-      <span class="err">├──</span> <span class="nx">modules</span>
-      <span class="err">│  </span> <span class="err">└──</span> <span class="p">...</span>
-      <span class="err">├──</span> <span class="kr">static</span>
-      <span class="err">│  </span> <span class="err">├──</span> <span class="nx">css</span>
-      <span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="p">...</span>
-      <span class="err">│  </span> <span class="err">├──</span> <span class="p">...</span>
-      <span class="err">│  </span> <span class="err">└──</span> <span class="nx">js</span>
-      <span class="err">│  </span>     <span class="err">├──</span> <span class="p">...</span>
-      <span class="err">└──</span> <span class="nx">views</span>
-          <span class="err">├──</span> <span class="p">...</span></code></pre></figure>
+<h4 id="gradle">Gradle</h4>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">repositories</span> <span class="o">{</span>
+  <span class="n">jcenter</span><span class="o">()</span>
+<span class="o">}</span>
+<span class="n">dependencies</span> <span class="o">{</span>
+  <span class="n">compile</span> <span class="err">&#39;</span><span class="n">xyz</span><span class="o">.</span><span class="na">windjs</span><span class="o">.</span><span class="na">android</span><span class="o">:</span><span class="nl">WindHotspot:</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="err">&#39;</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="init-for-use-it">Init for use it</h2>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">WindHotspot</span><span class="o">.</span><span class="na">init</span><span class="o">();</span> <span class="c1">// Use it from onCreate Application or Activity only one</span></code></pre></figure>
+
+<h2 id="register-event">Register event</h2>
+
+<h3 id="section">#1</h3>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Call</span> <span class="n">call</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Call</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="n">Object</span><span class="o">...</span> <span class="n">objectes</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">objectes</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">)</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">&quot;OK Event&quot;</span><span class="o">,</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">objectes</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span> <span class="c1">//String object follow with object u call event</span>
+            <span class="o">}</span>
+        <span class="o">};</span>
+<span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">bind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="n">call</span><span class="o">);</span></code></pre></figure>
+
+<h3 id="section-1">#2</h3>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">YourClass</span> <span class="kd">implements</span> <span class="n">Call</span><span class="o">{</span>
+    
+    <span class="kd">public</span> <span class="nf">YourClass</span><span class="o">(){</span>
+      <span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">bind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="k">this</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="n">Object</span><span class="o">...</span> <span class="n">objectes</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">&quot;FUCK&quot;</span><span class="o">,</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">objectes</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="unbind-event">Unbind Event</h2>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">unbind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="n">call</span><span class="o">);</span></code></pre></figure>
 
 	  </div>
 
@@ -234,8 +244,8 @@
 		  
 		  
 			 
-				<li><a href="/categories.html#nodejs-ref">
-					nodejs <span>(4)</span>
+				<li><a href="/categories.html#android-ref">
+					android <span>(1)</span>
 					
 				</a></li>
 			
@@ -250,15 +260,15 @@
 		  
 			 
 				<li>
-					<a href="/tags.html#nodejs-ref">
-					nodejs <span>(4)</span>
+					<a href="/tags.html#android-ref">
+					android <span>(1)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="/tags.html#mvc-ref">
-					mvc <span>(3)</span>
+					<a href="/tags.html#libs-ref">
+					libs <span>(1)</span>
 					
 					</a>
 				</li>
@@ -273,7 +283,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=WNodeJS Framework Verions 2&via=buminta"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Android - WindHotspot ( bind, unbind event free style like JS)&via=buminta"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -328,10 +338,10 @@
 	<hr>
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/nodejs/js/2014/10/20/blocking-vs-nonblocking.html" title="Blocking vs Non-blocking">&larr; Previous</a></li>
+		  <li class="previous"><a href="/nodejs/2014/10/31/wnodejs-version-2.html" title="WNodeJS Framework Verions 2">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/android/2016/07/02/android-windhotspot.html" title="Android - WindHotspot ( bind, unbind event free style like JS)">Next &rarr;</a></li>
+			<li class="next disabled"><a>Next &rarr;</a>
 		  
 		</ul>
 

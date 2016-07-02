@@ -1,6 +1,12 @@
 var docs = 
 {
 
+	"/android/2016/07/02/android-windhotspot.html":{
+	"id"    : "/android/2016/07/02/android-windhotspot.html",
+	"title"   : "Android - WindHotspot ( bind, unbind event free style like JS)",
+	"content" : "Version 0.0.1 Description in githubMaven&lt;dependency&gt;  &lt;groupId&gt;xyz.windjs.android&lt;/groupId&gt;  &lt;artifactId&gt;WindHotspot&lt;/artifactId&gt;  &lt;version&gt;0.0.1&lt;/version&gt;  &lt;type&gt;pom&lt;/type&gt;&lt;/dependency&gt;Gradlerepositories {  jcenter()}dependencies {  compile &#39;xyz.windjs.android:WindHotspot:0.0.1&#39;}Init for use itWindHotspot.init(); // Use it from onCreate Application or Activity only oneRegister event#1Call call = new Call() {            @Override            public void run(Object... objectes) {                if(objectes.length &gt; 1) Log.d(&quot;OK Event&quot;, (String) objectes[0]); //String object follow with object u call event            }        };WindHotspot.getInstance().bind(&quot;TestEvent&quot;, call);#2class YourClass implements Call{        public YourClass(){      WindHotspot.getInstance().bind(&quot;TestEvent&quot;, this);    }    @Override    public void run(Object... objectes) {        Log.e(&quot;FUCK&quot;, (String) objectes[0]);    }}Unbind EventWindHotspot.getInstance().unbind(&quot;TestEvent&quot;, call);"
+},
+
 	"/nodejs/2014/10/31/wnodejs-version-2.html":{
 	"id"    : "/nodejs/2014/10/31/wnodejs-version-2.html",
 	"title"   : "WNodeJS Framework Verions 2",
