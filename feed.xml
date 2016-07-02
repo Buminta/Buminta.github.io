@@ -7,8 +7,10 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Android - WindHotspot ( bind, unbind event free style like JS)</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://github.com/Buminta/WindHotspot&quot;&gt;Version 0.0.1 Description in github&lt;/a&gt;&lt;/p&gt;
+				<title>Android - WindHotspot</title>
+				<description>&lt;p&gt;Bind and Unbind custom everyone events with everyone arguments method in everywhere (free style like JS)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Buminta/WindHotspot&quot;&gt;Version 0.0.1 Description in github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;maven&quot;&gt;Maven&lt;/h4&gt;
 
