@@ -191,31 +191,31 @@
 
 <h4 id="maven">Maven</h4>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">xyz</span><span class="o">.</span><span class="na">windjs</span><span class="o">.</span><span class="na">android</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">WindHotspot</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="n">pom</span><span class="o">&lt;/</span><span class="n">type</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span></code></pre></figure>
 
 <h4 id="gradle">Gradle</h4>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">repositories</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">repositories</span> <span class="o">{</span>
   <span class="n">jcenter</span><span class="o">()</span>
 <span class="o">}</span>
 <span class="n">dependencies</span> <span class="o">{</span>
-  <span class="n">compile</span> <span class="err">&#39;</span><span class="n">xyz</span><span class="o">.</span><span class="na">windjs</span><span class="o">.</span><span class="na">android</span><span class="o">:</span><span class="nl">WindHotspot:</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="err">&#39;</span>
+  <span class="n">compile</span> <span class="err">&#39;</span><span class="n">xyz</span><span class="o">.</span><span class="na">windjs</span><span class="o">.</span><span class="na">android</span><span class="o">:</span><span class="n">WindHotspot</span><span class="o">:</span><span class="mf">0.0.1</span><span class="err">&#39;</span>
 <span class="o">}</span></code></pre></figure>
 
 <h2 id="init-for-use-it">Init for use it</h2>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">WindHotspot</span><span class="o">.</span><span class="na">init</span><span class="o">();</span> <span class="c1">// Use it from onCreate Application or Activity only one</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">WindHotspot</span><span class="o">.</span><span class="na">init</span><span class="o">();</span> <span class="c1">// Use it from onCreate Application or Activity only one</span></code></pre></figure>
 
 <h2 id="register-event">Register event</h2>
 
-<h3 id="section">#1</h3>
+<h3 id="1">#1</h3>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Call</span> <span class="n">call</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Call</span><span class="o">()</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">Call</span> <span class="n">call</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Call</span><span class="o">()</span> <span class="o">{</span>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="n">Object</span><span class="o">...</span> <span class="n">objectes</span><span class="o">)</span> <span class="o">{</span>
                 <span class="k">if</span><span class="o">(</span><span class="n">objectes</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">)</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">&quot;OK Event&quot;</span><span class="o">,</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">objectes</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span> <span class="c1">//String object follow with object u call event</span>
@@ -223,9 +223,9 @@
         <span class="o">};</span>
 <span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">bind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="n">call</span><span class="o">);</span></code></pre></figure>
 
-<h3 id="section-1">#2</h3>
+<h3 id="2">#2</h3>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">YourClass</span> <span class="kd">implements</span> <span class="n">Call</span><span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">class</span> <span class="nc">YourClass</span> <span class="kd">implements</span> <span class="n">Call</span><span class="o">{</span>
     
     <span class="kd">public</span> <span class="nf">YourClass</span><span class="o">(){</span>
       <span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">bind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="k">this</span><span class="o">);</span>
@@ -239,7 +239,7 @@
 
 <h2 id="unbind-event">Unbind Event</h2>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">unbind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="n">call</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">WindHotspot</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">unbind</span><span class="o">(</span><span class="s">&quot;TestEvent&quot;</span><span class="o">,</span> <span class="n">call</span><span class="o">);</span></code></pre></figure>
 
 	  </div>
 
@@ -364,7 +364,7 @@
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2017 Tan Bui with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 Tan Bui with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

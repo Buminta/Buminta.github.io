@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://buminta.com/programing/2018/02/27/lap-trinh-la-cai-quai-gi.html</loc>
+    
+    <lastmod>2018-02-27T00:00:00+07:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
     <loc>http://buminta.com/startup/2016/10/01/startup-de-hay-kho.html</loc>
     
     <lastmod>2016-10-01T00:00:00+07:00</lastmod>
@@ -90,6 +99,8 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  
   
   
   

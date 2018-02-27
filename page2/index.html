@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Search</title>
+	<title>Tan Bui Projects</title>
 	
 	<meta name="author" content="Tan Bui">
 
@@ -168,44 +168,58 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Search </h1>
+  <h1>Tan Bui Projects </h1>
 </div>
 
-<input class="form-control" placeholder="Text search" id="input-search"/>
-<hr>
-<!-- Tab panes -->
-<div class="tab-content col-sm-12 col-xs-6" id="content-search">
 
-</div>
 
-<div class="clearfix"></div>
-<script src="/assets/js/lunr.min.js"></script>
-<script src="/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    if($("#input-search").val().length > 0){
-      getData()
-    }
-    $("#input-search").bind('keyup', function(){
-      getData();
-    });
-  });
-  function getData(){
-    var results = idx.search($("#input-search").val());
-      $("#content-search").html("");
-      for(index in results){
-        $("#content-search").append(
-          '<div class="tab-pane" style="display: block;">'
-            +'<ul class="list-unstyled">'
-              +'<li style="line-height: 35px;">'
-                +'<a href="'+results[index].ref+'">'+docs[results[index].ref].title+'</a>'
-              +'</li>'
-            +'</ul>'
-          +'</div>'
-        );
-      }
-  }
-</script>
+<article class="home">
+
+  <span class="post-date">
+    
+    September
+    6th,
+    
+    2014
+  </span>
+
+  <h2>
+    <a href="/nodejs/2014/09/06/chat-realtime-wnodejs.html">Chat Realtime WNodeJS</a>
+  </h2>
+
+  <div>
+    
+    
+    Framework WNodeJS - https://github.com/Buminta/WNodeJS.
+    
+    
+  </div>
+
+</article>
+
+<hr/>
+
+<ul class="pager"> 
+
+  
+  <li class="previous">
+    
+    <a href="/">&larr; Newer</a>
+    
+  </li>
+  
+  
+  <li>
+    <span class="page_number">Page: 2 of 2</span>
+  </li>
+
+  
+  <li class="next disabled">
+    <a>Older &rarr;</a>        
+  </li>
+  
+
+</ul>
 <div class="clearfix"></div>
 
 
