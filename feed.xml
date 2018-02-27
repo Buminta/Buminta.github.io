@@ -20,6 +20,50 @@ Thân ái!&lt;/p&gt;
 			</item>
 		
 			<item>
+				<title>Dòng chảy của Vars(biến) trong mô hình MVC (Model - control - view)</title>
+				<description>&lt;p&gt;Hiện nay để xây dựng 1 Web application thì mô hình MVC là rất phổ biến. Mô hình này có thể thấy ở mọi Framework của các ngôn ngữ lập trình như Ruby, Python, PHP, ASP.Net, NodeJS,… 
+Các Framework đều dự trên mô hình MVC làm chuẩn để hỗ trợ xây dựng Web application vs các gói hỗ trợ cho từng loại ngôn ngữ.&lt;/p&gt;
+
+&lt;p&gt;Vậy khi xây dựng một Web application người lập trình viên cần nắm rõ nó cũng như nắm được dòng chảy của các biến trong một chương trình để có thể debug và tìm lỗi ngược về nơi nó bắt đầu đến khi nảy sinh lỗi.&lt;/p&gt;
+
+&lt;p&gt;Vậy dòng chảy chung của vars cho một hệ thống vs mô hình MVC như thế nào?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Giữa M &amp;lt;-&amp;gt; V &amp;lt;-&amp;gt; C:
+    &lt;ul&gt;
+      &lt;li&gt;Ta có thể thấy ngay ở sơ đồ bên dưới: Controllers luôn làm nhiệm vụ xử lý dữ liệu và giao tiếp vs Models để  xử lý dữ liệu và chuyển cho views sau cùng.&lt;/li&gt;
+      &lt;li&gt;Controllers được phép yêu cầu sử dụng views nào và truyền xuống cho views những giá trị vs các tên biến cụ thể.&lt;/li&gt;
+      &lt;li&gt;Models nhận các giá trị từ controllers và xử lý rồi trả ra giá trị controllers cần&lt;/li&gt;
+      &lt;li&gt;Views luôn luôn chỉ nhận giá trị và ko có khả năng xử lý giá trị trả lại cho controllers (lưu ý views là điểm cuối của dòng chảy biến, views chỉ có thể hỗ trợ gửi vars lên controllers bằng các requests từ phí client)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://buminta.com/assets/images/var.jpg&quot; alt=&quot;Lập trình là cái gì?&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Giữa các block_views và view_layout.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Với một Web application thì trong views cũng cần có sự kế thừa, dùng lại code nên cơ chế tạo template và render layout là cần thiết. vì vậy trong mô hình MVC, lớp Views luôn luôn hỗ trợ cơ chế này: Một layouts luôn là khung xương chính cho cả Websites, Và các Block_view sẽ hiển thị các thông tin theo yêu cầu của từng page.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Nhìn tổng quan vào hình bên dưới chúng ta sẽ thấy lớp Views ban đầu sẽ được khởi tạo từ một layouts. Và layouts đó bắt đầu include các block_content phù hợp vào để hiển thị, vì thế các giá trị biến trong layout sẽ có thể sử dụng được trong block_content cũng như, layouts sẽ hứng được đầu tiên các giá trị mà controllers truyền xuống&lt;/li&gt;
+      &lt;li&gt;Giữa các block_content thì giá trị thông thường sẽ được sử dụng và truyền theo thứ tự block_content nào được nạp vào trước, block_content nạp sau có thể sử dụng được một số giá trị global của block_content trước đã xử lý.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://buminta.com/assets/images/view.jpg&quot; alt=&quot;Lập trình là cái gì?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Đó là những gì tổng quan và cơ bản nhất về dòng chảy của các biến (giá trị) trong mô hình MVC, giúp cho các bạn Lập trình viên có thể tìm hiểu và debug nguyên nhân gây ra lỗi trong hệ thống.&lt;/p&gt;
+
+&lt;p&gt;Kt: Tan Bui.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 27 Feb 2018 00:00:00 +0700</pubDate>
+				<link>http://buminta.com/programing/2018/02/27/dong-chay-bien-trong-mo-hinh-mvc.html</link>
+				<guid isPermaLink="true">/programing/2018/02/27/dong-chay-bien-trong-mo-hinh-mvc.html</guid>
+			</item>
+		
+			<item>
 				<title>Startup dễ hay khó</title>
 				<description>&lt;p&gt;Hẳn ai trong chúng ta, tôi hay các bạn khi đã đặt niềm tin lên con đường chinh phục CNTT này, với những đam mê và hoài bão của riêng mình, không ít những con người mong muốn và tâm huyết với những sản phẩm của riêng mình cũng như muốn mình làm chủ được công nghệ cũng như có chân trời riêng để thỏa sức sang tạo và phát triển.&lt;/p&gt;
 
@@ -373,81 +417,6 @@ Và điều quan trọng để bạn tiếp cận các ngôn ngữ đó là hi�
 				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
 				<link>http://buminta.com/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</link>
 				<guid isPermaLink="true">/language/2014/09/06/ngon-ngu-lap-trinh-nao-tot-nhat.html</guid>
-			</item>
-		
-			<item>
-				<title>Framework MVC for build web application by NodeJS</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://github.com/Buminta/WNodeJS&quot;&gt;Beta version from git&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;mvc-framework-for-build-web-application&quot;&gt;MVC Framework for build web application&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//configs.js&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;listen_port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;27017&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;demo&amp;quot;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;sercurity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;express.sid&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1234567890QWERTY&amp;quot;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;// socket_path: samples.js&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;// adding when using socket.io&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;// var global for using: socket, session&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Using socket when u need&lt;/p&gt;
-
-&lt;p&gt;Package using from fw&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//package.json&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;WNodeJS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;description&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;MVC Framework for ExpressJS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;version&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1.0.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Tan Bui (http://buminta.com)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;repository&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;git&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/buminta/wnode.git&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;dependencies&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;express&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;3.x&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;MD5&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;latest&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;socket.io&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;latest&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;jade&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;latest&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;connect&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;latest&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;mongodb&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;latest&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&amp;quot;engines&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;node&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;0.10.x&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;npm&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1.4.x&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;public folder for using somes file using in client&lt;/li&gt;
-  &lt;li&gt;views folder for jade language of template application&lt;/li&gt;
-  &lt;li&gt;models folder for class in out with database&lt;/li&gt;
-  &lt;li&gt;controllers folder for class control request and responsive&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// controllers/demo.js&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Extend from controller Class in libs.&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//the first run before action runing&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//action for controller&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-				<pubDate>Sat, 06 Sep 2014 00:00:00 +0700</pubDate>
-				<link>http://buminta.com/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</link>
-				<guid isPermaLink="true">/nodejs/2014/09/06/framework-mvc-for-build-web-applicaion-by-nodejs.html</guid>
 			</item>
 		
 	</channel>
